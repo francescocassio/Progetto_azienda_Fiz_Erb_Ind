@@ -2,7 +2,7 @@ import csv
 import mysql.connector
 from mysql.connector import Error
 
-CSV_PATH = r"/Progetto_azienda_completo\progetto_az2\file_vari\fatture.csv"
+CSV_PATH = r"C:\Users\gianl\PycharmProjects\PythonProject\Progetto_azienda_completo\file_vari\fatture.csv"
 DB_CONFIG = {
     "user": "root",
     "password": "",
@@ -26,9 +26,9 @@ def importa_csv():
     insert_sql = """
         INSERT INTO fattura (
             emittente, destinatario, bene_servizio_venduto,
-            importo, iva, imponibile, data_fattura
+            importo, iva, imponibile, data_fattura, cliente_id
         )
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     try:
@@ -37,7 +37,7 @@ def importa_csv():
 
             colonne_richieste = {
                 "emittente", "destinatario", "bene_servizio_venduto",
-                "importo", "iva", "imponibile", "data_fattura"
+                "importo", "iva", "imponibile", "data_fattura", "cliente_id"
             }
             missing = colonne_richieste - set(reader.fieldnames or [])
             if missing:
@@ -52,11 +52,11 @@ def importa_csv():
                 iva = to_float(r["iva"])
                 imponibile = to_float(r["imponibile"])
                 data_fattura = (r["data_fattura"] or "").strip()
-
+                cliente_id = int(r["cliente_id"]) if r.get("cliente_id") else None
                 if not destinatario or not bene or not data_fattura:
                     raise ValueError(f"Riga non valida: {r}")
 
-                rows.append((emittente, destinatario, bene, importo, iva, imponibile, data_fattura))
+                rows.append((emittente, destinatario, bene, importo, iva, imponibile, data_fattura, cliente_id))
 
         cursor.executemany(insert_sql, rows)
         conn.commit()

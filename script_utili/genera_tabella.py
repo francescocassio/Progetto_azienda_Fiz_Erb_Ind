@@ -17,7 +17,9 @@ def crea_tabella():
          importo DOUBLE NOT NULL,
          iva double NOT NULL,
          imponibile double NOT NULL,
-         data_fattura DATE
+         data_fattura DATE,
+         cliente_id INT,
+         FOREIGN KEY (cliente_id) REFERENCES clienti(id_cliente)
      );
 """
     cursor.execute(q_crea_fatture)
