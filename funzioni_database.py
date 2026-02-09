@@ -201,3 +201,5 @@ def login_utente(username: str, password:str):
         return None
 
     return {"id_utente": id_utente, "username": user, "ruolo": ruolo}
+
+print("teo bosss")
