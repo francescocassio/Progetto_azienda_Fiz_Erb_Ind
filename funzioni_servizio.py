@@ -9,6 +9,7 @@ from funzioni_database import incassi_totali
 from funzioni_database import login_utente
 #NON VA LO STESSOOOOOO. from getpass import getpass #chiesto a chatgpt come nascondere i caratteri della password all'inserimento
 from funzioni_database import registra_utente
+from funzioni_nuove import mostra_clienti, id_clienti_presenti
 
 
 def inserisci_fattura():
@@ -17,7 +18,16 @@ def inserisci_fattura():
     id_massimo = risultato[0][0]
 
     id_fattura = (id_massimo if id_massimo is not None else 0) + 1 #AIUTO GEMINI (calcolo se id è nullo perchè 0 fatture, lo trasforma in 0)
-    destinatario = input("Inserisci il destinatario: ").strip()
+    mostra_clienti()
+
+    while True:
+        destinatario_id = int(input("Inserisci l'id del destinatario: "))
+        if destinatario_id in id_clienti_presenti():
+            break
+        else:
+            print("Inserisci un id valido!")
+
+
     bsvenduto = input("Inserisci il bene servizio venduto: ").strip()
 
     try:
@@ -26,8 +36,8 @@ def inserisci_fattura():
         print("Errore: L'importo deve essere un numero valido. Operazione annullata.")
         return
 
-    if destinatario == "" or bsvenduto == "":
-        print("Errore: Destinatario o Servizio mancanti. Operazione annullata.")
+    if bsvenduto == "":
+        print("Errore: Servizio mancanti. Operazione annullata.")
         return
 
     imponibile = importo / 1.22
@@ -38,10 +48,10 @@ def inserisci_fattura():
     data_fattura = datetime.date.today()
 
     # impacchettiamo tutti i dati in una tupla, per passarla in allegato alla execute
-    dati = (id_fattura, destinatario, bsvenduto, importo, iva, imponibile, data_fattura)
+    dati = (id_fattura, bsvenduto, importo, iva, imponibile, data_fattura, destinatario_id)
 
     q_inserisci_fattura = f"""
-    INSERT INTO fattura (id_fattura,destinatario, bene_servizio_venduto, importo, iva, imponibile, data_fattura)
+    INSERT INTO fattura (id_fattura,bene_servizio_venduto, importo, iva, imponibile, data_fattura, cliente_id)
     VALUES (%s, %s, %s, %s, %s, %s, %s)
     """
 
@@ -134,6 +144,7 @@ def esegui_registrazione():
         return
 
     try:
+
         righe = registra_utente(username, password, "user")
         if righe > 0:
             print("Utente registrato con successo")
@@ -159,3 +170,6 @@ def esegui_login():
 
     print(f"LOGIN EFFETTUATO. BENVENUTO {utente['username']}!")
     return utente
+
+if __name__ == '__main__':
+    inserisci_fattura()

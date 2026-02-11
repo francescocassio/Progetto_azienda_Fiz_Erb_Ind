@@ -6,6 +6,10 @@ def crea_database():
         host="localhost")
     cursor = conn.cursor()
 
+    q_delete_database = "DROP DATABASE azienda_generation"
+    cursor.execute(q_delete_database)
+
+
     q_crea_database = "CREATE DATABASE azienda_generation"
     cursor.execute(q_crea_database)
 

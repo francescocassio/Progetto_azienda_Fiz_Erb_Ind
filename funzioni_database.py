@@ -69,6 +69,21 @@ def esegui_query_param(query, param):
         cursor.close()
         connessione.close()
 
+def esegui_query_param_noexc(query, param):
+    connessione = create_connection()
+    cursor = connessione.cursor()
+    try:
+        cursor.execute(query, param)
+        connessione.commit()
+        print("Query executed successfully")
+        return cursor.rowcount
+
+    except Error as e:
+        raise e
+
+    finally:
+        cursor.close()
+        connessione.close()
 
 def elimina_fattura(id_fattura: int) -> int:
     return esegui_query_param(

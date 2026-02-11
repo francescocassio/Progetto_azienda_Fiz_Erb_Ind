@@ -12,7 +12,6 @@ def crea_tabella():
     create table fattura(
          id_fattura INT PRIMARY KEY AUTO_INCREMENT,
          emittente VARCHAR(80) DEFAULT "Azienda Zurich" NOT NULL,
-         destinatario VARCHAR(80) NOT NULL,
          bene_servizio_venduto VARCHAR(80) NOT NULL,
          importo DOUBLE NOT NULL,
          iva double NOT NULL,
@@ -24,9 +23,7 @@ def crea_tabella():
 """
     cursor.execute(q_crea_fatture)
 
-    creazione_trigger_arrotonda_iva_imponibile = """
-          DELIMITER $$
-        
+    creazione_trigger_arrotonda_iva_imponibile = """        
         CREATE TRIGGER arrotonda_fatture
         BEFORE INSERT ON fattura
         FOR EACH ROW
@@ -37,9 +34,7 @@ def crea_tabella():
             IF ROUND(NEW.imponibile + NEW.iva, 2) <> NEW.importo THEN
                 SET NEW.importo = ROUND(NEW.imponibile + NEW.iva, 2);
             END IF;
-        END$$
-        
-        DELIMITER ;
+        END
         """
     #aggiungo anche il trigger
     cursor.execute(creazione_trigger_arrotonda_iva_imponibile)
@@ -50,5 +45,6 @@ if __name__ == '__main__':
     try:
         crea_tabella()
         print("tabella creata con successo")
-    except mysql.connector.errors.ProgrammingError:
+    except mysql.connector.errors.ProgrammingError as e:
+        print(e)
         print("Tabella già esistente")
