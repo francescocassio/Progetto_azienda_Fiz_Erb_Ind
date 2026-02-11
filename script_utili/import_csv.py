@@ -25,10 +25,10 @@ def importa_csv():
 
     insert_sql = """
         INSERT INTO fattura (
-            emittente, destinatario, bene_servizio_venduto,
+            emittente, bene_servizio_venduto,
             importo, iva, imponibile, data_fattura, cliente_id
         )
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
     """
 
     try:
@@ -36,7 +36,7 @@ def importa_csv():
             reader = csv.DictReader(f)
 
             colonne_richieste = {
-                "emittente", "destinatario", "bene_servizio_venduto",
+                "emittente", "bene_servizio_venduto",
                 "importo", "iva", "imponibile", "data_fattura", "cliente_id"
             }
             missing = colonne_richieste - set(reader.fieldnames or [])
@@ -46,17 +46,16 @@ def importa_csv():
             rows = []
             for r in reader:
                 emittente = (r["emittente"] or "").strip() or "Azienda Zurich"
-                destinatario = (r["destinatario"] or "").strip()
                 bene = (r["bene_servizio_venduto"] or "").strip()
                 importo = to_float(r["importo"])
                 iva = to_float(r["iva"])
                 imponibile = to_float(r["imponibile"])
                 data_fattura = (r["data_fattura"] or "").strip()
                 cliente_id = int(r["cliente_id"]) if r.get("cliente_id") else None
-                if not destinatario or not bene or not data_fattura:
+                if not bene or not data_fattura:
                     raise ValueError(f"Riga non valida: {r}")
 
-                rows.append((emittente, destinatario, bene, importo, iva, imponibile, data_fattura, cliente_id))
+                rows.append((emittente, bene, importo, iva, imponibile, data_fattura, cliente_id))
 
         cursor.executemany(insert_sql, rows)
         conn.commit()
