@@ -1,51 +1,51 @@
-emittente,destinatario,bene_servizio_venduto,importo,iva,imponibile,data_fattura,cliente_id
-Azienda Zurich,Rossi Trasporti,Consulenza Logistica,1220.00,220.00,1000.00,2025-01-10,1
-Azienda Zurich,Tech Solutions SRL,Licenza Software,500.00,90.16,409.84,2025-01-12,2
-Azienda Zurich,Rossi Trasporti,Manutenzione Mezzi,850.00,153.28,696.72,2025-01-15,3
-Azienda Zurich,Global Export SPA,Analisi di Mercato,2440.00,440.00,2000.00,2025-01-18,4
-Azienda Zurich,Studio Legale Bianchi,Parere Assicurativo,150.00,27.05,122.95,2025-01-20,5
-Azienda Zurich,Tech Solutions SRL,Aggiornamento Cloud,300.00,54.10,245.90,2025-01-22,6
-Azienda Zurich,Rossi Trasporti,Rinnovo Polizza,3660.00,660.00,3000.00,2025-01-25,7
-Azienda Zurich,EcoGreen House,Audit Energetico,1200.00,216.39,983.61,2025-01-28,8
-Azienda Zurich,Global Export SPA,Gestione Sinistri,900.00,162.30,737.70,2025-02-01,1
-Azienda Zurich,Studio Legale Bianchi,Supporto IT,450.00,81.15,368.85,2025-02-03,2
-Azienda Zurich,Tech Solutions SRL,Consulenza Sicurezza,750.00,135.25,614.75,2025-02-05,3
-Azienda Zurich,Rossi Trasporti,Formazione Personale,1830.00,330.00,1500.00,2025-02-08,4
-Azienda Zurich,EcoGreen House,Fornitura Materiale,610.00,110.00,500.00,2025-02-10,5
-Azienda Zurich,Global Export SPA,Export Report,3000.00,540.98,2459.02,2025-02-12,6
-Azienda Zurich,Rossi Trasporti,Abbonamento Annuale,122.00,22.00,100.00,2025-02-15,7
-Azienda Zurich,Studio Legale Bianchi,Hardware PC,980.00,176.72,803.28,2025-02-18,8
-Azienda Zurich,Tech Solutions SRL,Sviluppo Web,5000.00,901.64,4098.36,2025-02-20,1
-Azienda Zurich,EcoGreen House,Sopralluogo Tecnico,250.00,45.08,204.92,2025-02-22,2
-Azienda Zurich,Global Export SPA,Consulenza Doganale,1500.00,270.49,1229.51,2025-02-25,3
-Azienda Zurich,Rossi Trasporti,Revisione Contabile,800.00,144.26,655.74,2025-02-28,4
-Azienda Zurich,Studio Legale Bianchi,Costi Notarili,120.00,21.64,98.36,2025-03-01,5
-Azienda Zurich,Tech Solutions SRL,Data Entry,400.00,72.13,327.87,2025-03-03,6
-Azienda Zurich,EcoGreen House,Certificazione ISO,2440.00,440.00,2000.00,2025-03-05,7
-Azienda Zurich,Global Export SPA,Logistica Estera,5500.00,991.80,4508.20,2025-03-08,8
-Azienda Zurich,Rossi Trasporti,Pulizia Uffici,300.00,54.10,245.90,2025-03-10,1
-Azienda Zurich,Studio Legale Bianchi,Cancelleria,150.00,27.05,122.95,2025-03-12,2
-Azienda Zurich,Tech Solutions SRL,Hosting Server,600.00,108.20,491.80,2025-03-15,3
-Azienda Zurich,EcoGreen House,Riparazione Guasti,220.00,39.67,180.33,2025-03-18,4
-Azienda Zurich,Global Export SPA,Marketing Digitale,1220.00,220.00,1000.00,2025-03-20,5
-Azienda Zurich,Rossi Trasporti,Pneumatici,950.00,171.31,778.69,2025-03-22,6
-Azienda Zurich,Studio Legale Bianchi,Pratiche Auto,180.00,32.46,147.54,2025-03-25,7
-Azienda Zurich,Tech Solutions SRL,Setup Rete,1100.00,198.36,901.64,2025-03-28,8
-Azienda Zurich,EcoGreen House,Consulenza Green,700.00,126.23,573.77,2025-04-01,1
-Azienda Zurich,Global Export SPA,Traduzioni Tecniche,450.00,81.15,368.85,2025-04-03,2
-Azienda Zurich,Rossi Trasporti,Carburante,3000.00,540.98,2459.02,2025-04-05,3
-Azienda Zurich,Studio Legale Bianchi,Archiviazione,250.00,45.08,204.92,2025-04-08,4
-Azienda Zurich,Tech Solutions SRL,Cyber Security,2440.00,440.00,2000.00,2025-04-10,5
-Azienda Zurich,EcoGreen House,Pannelli Solari,8500.00,1532.79,6967.21,2025-04-12,6
-Azienda Zurich,Global Export SPA,Spedizione Marittima,4200.00,757.38,3442.62,2025-04-15,7
-Azienda Zurich,Rossi Trasporti,Pedaggi Autostradali,500.00,90.16,409.84,2025-04-18,8
-Azienda Zurich,Studio Legale Bianchi,Visure Camerali,90.00,16.23,73.77,2025-04-20,1
-Azienda Zurich,Tech Solutions SRL,Assistenza Remota,150.00,27.05,122.95,2025-04-22,2
-Azienda Zurich,EcoGreen House,Smaltimento Rifiuti,400.00,72.13,327.87,2025-04-25,3
-Azienda Zurich,Global Export SPA,Fiera Internazionale,2500.00,450.82,2049.18,2025-04-28,4
-Azienda Zurich,Rossi Trasporti,Noleggio Mezzo,1220.00,220.00,1000.00,2025-05-01,5
-Azienda Zurich,Studio Legale Bianchi,Consulenza Fiscale,600.00,108.20,491.80,2025-05-03,6
-Azienda Zurich,Tech Solutions SRL,Backup Dati,200.00,36.07,163.93,2025-05-05,7
-Azienda Zurich,EcoGreen House,Analisi Acque,350.00,63.11,286.89,2025-05-08,8
-Azienda Zurich,Global Export SPA,Assicurazione Merci,1800.00,324.59,1475.41,2025-05-10,1
-Azienda Zurich,Rossi Trasporti,Corso Guida Sicura,900.00,162.30,737.70,2025-05-12,2
+emittente,bene_servizio_venduto,importo,iva,imponibile,data_fattura,cliente_id
+Azienda Zurich,Consulenza Logistica,1220.00,220.00,1000.00,2025-01-10,1
+Azienda Zurich,Licenza Software,500.00,90.16,409.84,2025-01-12,2
+Azienda Zurich,Manutenzione Mezzi,850.00,153.28,696.72,2025-01-15,3
+Azienda Zurich,Analisi di Mercato,2440.00,440.00,2000.00,2025-01-18,4
+Azienda Zurich,Parere Assicurativo,150.00,27.05,122.95,2025-01-20,5
+Azienda Zurich,Aggiornamento Cloud,300.00,54.10,245.90,2025-01-22,6
+Azienda Zurich,Rinnovo Polizza,3660.00,660.00,3000.00,2025-01-25,7
+Azienda Zurich,Audit Energetico,1200.00,216.39,983.61,2025-01-28,8
+Azienda Zurich,Gestione Sinistri,900.00,162.30,737.70,2025-02-01,1
+Azienda Zurich,Supporto IT,450.00,81.15,368.85,2025-02-03,2
+Azienda Zurich,Consulenza Sicurezza,750.00,135.25,614.75,2025-02-05,3
+Azienda Zurich,Formazione Personale,1830.00,330.00,1500.00,2025-02-08,4
+Azienda Zurich,Fornitura Materiale,610.00,110.00,500.00,2025-02-10,5
+Azienda Zurich,Export Report,3000.00,540.98,2459.02,2025-02-12,6
+Azienda Zurich,Abbonamento Annuale,122.00,22.00,100.00,2025-02-15,7
+Azienda Zurich,Hardware PC,980.00,176.72,803.28,2025-02-18,8
+Azienda Zurich,Sviluppo Web,5000.00,901.64,4098.36,2025-02-20,1
+Azienda Zurich,Sopralluogo Tecnico,250.00,45.08,204.92,2025-02-22,2
+Azienda Zurich,Consulenza Doganale,1500.00,270.49,1229.51,2025-02-25,3
+Azienda Zurich,Revisione Contabile,800.00,144.26,655.74,2025-02-28,4
+Azienda Zurich,Costi Notarili,120.00,21.64,98.36,2025-03-01,5
+Azienda Zurich,Data Entry,400.00,72.13,327.87,2025-03-03,6
+Azienda Zurich,Certificazione ISO,2440.00,440.00,2000.00,2025-03-05,7
+Azienda Zurich,Logistica Estera,5500.00,991.80,4508.20,2025-03-08,8
+Azienda Zurich,Pulizia Uffici,300.00,54.10,245.90,2025-03-10,1
+Azienda Zurich,Cancelleria,150.00,27.05,122.95,2025-03-12,2
+Azienda Zurich,Hosting Server,600.00,108.20,491.80,2025-03-15,3
+Azienda Zurich,Riparazione Guasti,220.00,39.67,180.33,2025-03-18,4
+Azienda Zurich,Marketing Digitale,1220.00,220.00,1000.00,2025-03-20,5
+Azienda Zurich,Pneumatici,950.00,171.31,778.69,2025-03-22,6
+Azienda Zurich,Pratiche Auto,180.00,32.46,147.54,2025-03-25,7
+Azienda Zurich,Setup Rete,1100.00,198.36,901.64,2025-03-28,8
+Azienda Zurich,Consulenza Green,700.00,126.23,573.77,2025-04-01,1
+Azienda Zurich,Traduzioni Tecniche,450.00,81.15,368.85,2025-04-03,2
+Azienda Zurich,Carburante,3000.00,540.98,2459.02,2025-04-05,3
+Azienda Zurich,Archiviazione,250.00,45.08,204.92,2025-04-08,4
+Azienda Zurich,Cyber Security,2440.00,440.00,2000.00,2025-04-10,5
+Azienda Zurich,Pannelli Solari,8500.00,1532.79,6967.21,2025-04-12,6
+Azienda Zurich,Spedizione Marittima,4200.00,757.38,3442.62,2025-04-15,7
+Azienda Zurich,Pedaggi Autostradali,500.00,90.16,409.84,2025-04-18,8
+Azienda Zurich,Visure Camerali,90.00,16.23,73.77,2025-04-20,1
+Azienda Zurich,Assistenza Remota,150.00,27.05,122.95,2025-04-22,2
+Azienda Zurich,Smaltimento Rifiuti,400.00,72.13,327.87,2025-04-25,3
+Azienda Zurich,Fiera Internazionale,2500.00,450.82,2049.18,2025-04-28,4
+Azienda Zurich,Noleggio Mezzo,1220.00,220.00,1000.00,2025-05-01,5
+Azienda Zurich,Consulenza Fiscale,600.00,108.20,491.80,2025-05-03,6
+Azienda Zurich,Backup Dati,200.00,36.07,163.93,2025-05-05,7
+Azienda Zurich,Analisi Acque,350.00,63.11,286.89,2025-05-08,8
+Azienda Zurich,Assicurazione Merci,1800.00,324.59,1475.41,2025-05-10,1
+Azienda Zurich,Corso Guida Sicura,900.00,162.30,737.70,2025-05-12,2
