@@ -6,7 +6,7 @@ def crea_database():
         host="localhost")
     cursor = conn.cursor()
 
-    q_delete_database = "DROP DATABASE azienda_generation"
+    q_delete_database = "DROP DATABASE if exists azienda_generation"
     cursor.execute(q_delete_database)
 
 
